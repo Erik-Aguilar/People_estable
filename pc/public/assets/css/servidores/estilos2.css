@@ -1,0 +1,41 @@
+body {
+    background-color: #d0cfcd;
+}
+.huge{
+    font: bold 40px monospace;
+    text-align: center;
+}
+.huge2{
+    font: bold 25px sans-serif;
+}
+.glyphicon{
+    position: absolute;
+    font-size: 53px; 
+    margin-top: 15px;
+    margin-left: -60px;
+}
+.pull-left{
+    font: bold 15px sans-serif;
+    color:black;
+  }
+
+.panel{
+    color: white;
+}
+
+.panel-default1{
+background-color: #3db9b9;
+}
+.panel-default2{
+background-color: #8EC650;
+}
+.panel-default3{
+background-color: #F0AD4E;
+}
+.panel-default4{
+background-color: #2175BF;
+}
+
+.panel-default9{
+background-color: #CF694E;
+}

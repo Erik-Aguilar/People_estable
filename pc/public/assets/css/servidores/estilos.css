@@ -1,0 +1,78 @@
+
+body {
+    background-color: #d0cfcd;
+    padding-left: 2px;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+.huge{
+    font: bold 80px monospace;
+}
+#porcentaje1,#porcentaje2,#porcentaje3,#porcentaje4,#porcentaje7,#suma{
+padding-top: 40px;
+padding-left: 40px;    
+}
+/*
+.cuadro{
+    height: 200px;
+}
+*/
+
+.huge2{
+    font: bold 50px sans-serif;
+}
+.glyphicon{
+    position: absolute;
+    font-size: 53px; 
+    margin-top: 15px;
+    margin-left: -60px;
+}
+.pull-left{
+    font: bold 20px sans-serif;
+    color:black;
+}
+
+.panel{
+    color: white;
+}
+.panel-heading{
+padding: 0;
+    margin: 0;
+}
+
+
+.panel-default1{
+background-color: #3db9b9;
+}
+.panel-default2{
+background-color: #8EC650;
+}
+.panel-default3{
+background-color: #F0AD4E;
+}
+.panel-default4{
+background-color: #82bff5;
+}
+.panel-default5{
+background-color: #FE642E;
+}
+.panel-default7{
+background-color: #2175BF;
+}
+.panel-default8{
+background-color: #5858FA;
+}
+.panel-default9{
+background-color: #CF694E;
+}
+.panel-default10{
+background-color: #c06cc1;
+}
+
+
+table {
+    margin: 10px;
+    width: 100%;
+}
+

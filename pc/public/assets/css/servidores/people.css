@@ -1,0 +1,41 @@
+
+
+.normal {
+  width: 85px;
+  height:40px;
+  border: 1px solid #000;
+  border-collapse: collapse;
+    font-size: 6px;
+  font-size-adjust: 0.5;
+}
+.normal th{
+    text-align: center;
+  border: 1px solid #000;
+    
+}
+.boton {  
+  /*border: 1px solid #000;*/
+ 
+  text-align: center;
+}
+
+.letra{  
+  width: 55%;
+}
+
+table th {background-color: #30A4E7;
+color: white;
+font-size: 20px;
+    width: 30%;
+}
+
+table td {
+color: black;
+font-size: 6px;
+    width: 30%;
+}
+
+input[type="text"]{
+    width: 10px;
+}
+

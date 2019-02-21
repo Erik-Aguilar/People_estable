@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/rep.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Administración</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span</a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                          <ul class="dropdown-menu multi-level" role="menu">
+                            <li><a href="{{ url('/Administracion/admin') }}">Nuevo empleado</a></li>
+                            <li><a href="{{ url('/Administracion/admin/plantilla') }}">Plantilla</a></li>
+                            <li><a href="{{ url('/Administracion/admin/asistencia') }}">Reporte asistencia</a></li>
+                          </ul>
+                        </li>
+                          <li class="divider"></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">BackOffice <span class="caret"></span></a>
+                          <ul class="dropdown-menu multi-level" role="menu">
+                            <li><a href="{{ url('/bo') }}">Inicio</a></li>
+                            <li><a href="{{ url('/bo/nuevos') }}">Proceso 1</a></li>
+                            <li><a href="{{ url('/bo/viejos') }}">Proceso 2</a></li>
+                          </ul>
+                        </li>
+                          <li class="divider"></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Calidad <span class="caret"></span></a>
+                          <ul class="dropdown-menu multi-level" role="menu">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inbursa</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/calidad/inbursa') }}">Nuevo rango de fechas</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prepago</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/calidad/prepago') }}">Nuevo rango de fechas</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">TM_prepago</a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="{{ url('/calidad/ventas/Prepago') }}">Prepago</a></li>
+                                  <li><a href="{{ url('/calidad/ventas/Pospago') }}">Pospago</a></li>
+                                </ul>
+                            </li>
+                          </ul>
+                        </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Capacitación<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('capacitacionRoot') }}">Nueva fecha</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Citas Agendadas<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/citas') }}">lista de citas</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Coordinador<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/coordinador') }}">Pendiente de Alta</a></li>
+                              <li><a href="{{ url('/coordinadortotal') }}">Listado</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Facebook<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/facebook') }}">Nuevo Registro</a></li>
+                              <li><a href="{{ url('/facebook/vista') }}">Registros</a></li>
+                              <li class="divider"></li>
+                              <li><a href="{{ url('/reportesfacebook') }}">Ventas Hoy</a></li>
+                              <li><a href="{{ url('/reportesfacebook/filtro') }}">Reporte por Filtro</a></li>
+                              <li class="divider"></li>
+                              <li><a href="{{ url('facebookValida') }}">Registros pendientes a validacion</a></li>
+                              <li><a href="{{ url('facebookValidaTotal') }}">Registros</a></li>
+                              <li><a href="{{ url('/facebook/ventas_dia')}}">Ventas del día</a></li>
+                              <li><a href="{{ url('/facebook/venta_x_dia')}}">Reportes por filtro</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inbursa<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/inbursa') }}">Reportes</a></li>
+                              <li><a href="{{ url('/inbursa/validacion') }}">Buscar folio</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Operaciones<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/calidad/ventas/Prepago') }}">Prepago</a></li>
+                              <li><a href="{{ url('/calidad/ventas/Pospago') }}">Pospago</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Recepción<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/recepcion') }}">Pendiente de Alta</a></li>
+                              <li><a href="{{ url('/recepciontotal') }}">Listado</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reporte front<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/reporte') }}">Reporte 1</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Recursos humanos<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('rh/nuevo/candidato') }}">Nuevo Candidato</a></li>
+                              <li><a href="{{ url('rh/candidatos') }}">Ver candidatos</a></li>
+                              <li><a href="{{ url('rh/candidatosTotal') }}">listado de candidatos</a></li>
+                              <li><a href="{{ url('rh/capacitacion') }}">Asistencia a capacitacion</a></li>
+                              <li><a href="{{ url('rh/capacitacionMedio') }}">Capacitacion por medio de Reclutamiento</a></li>
+                              <li><a href="{{ url('rh/capacitacionMedioActivo') }}">Capacitacion por Reclutador</a></li>
+                              <li class="divider"></li>
+                              <li><a href="{{ url('rh/reportes-fechas/') }}">Reportes de Reclutamiento</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Root<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('Administracion/root') }}">Nuevo empleado</a></li>
+                              <li><a href="{{ url('Administracion/root/plantilla') }}">Plantilla</a></li>
+                              <li><a href="{{ url('Administracion/root/asistencia') }}">Reporte asistencia</a></li>
+                              <li><a href="{{ url('/capacitacionRoot') }}">Reporte de Capacitacion</a></li>
+                              <li><a href="{{ url('/Administracion/ReporteRooot') }}">Reporte Reclutamiento</a></li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">TMPRE<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/tm/pre/agente') }}">Gestión</a></li>
+                              <li><a href="{{ url('/people-dial/tm/prepago') }}">Predictivo</a></li>
+                              <li><a href="{{ url('/tm/pre/estadoAgente/lobby') }}">Estado del Agente</a></li>
+                              <li class="dropdown-submenu">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Super</a>
+                                  <ul class="dropdown-menu">
+                                      <li><a href="{{ url('tm/pre/supervisor/asistencia') }}">Reporte asistencia</a></li>
+                                      <li><a href="{{ url('prepago/supervisor') }}">Cambiar rango de fecha</a></li>
+                                  </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Validacón<span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu">
+                              <li><a href="{{ url('/modulo_validacion_x_dia') }}">Modulo por fechas</a></li>
+                            </ul>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/js/rep.js"></script>
+  </body>
+</html>
